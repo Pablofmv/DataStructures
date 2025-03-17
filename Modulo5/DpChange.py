@@ -1,3 +1,5 @@
+import time
+
 def dp_change(money, coins):
     min_num_coins = [float("inf")] * (money + 1)
     min_num_coins[0] = 0
@@ -18,4 +20,7 @@ def dp_change(money, coins):
 
 money = 1
 coins = [1,3,4]
+start_time = time.time()
 print(dp_change(money,coins))
+end_time = time.time()
+print(f"{end_time - start_time:.6f}")
