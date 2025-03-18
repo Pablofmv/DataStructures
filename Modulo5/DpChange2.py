@@ -16,8 +16,8 @@ def dp_change(money, coins):
     
     return min_num_coins[money]
 
-money = 6
-coins = [1,3,4]
+money = 100000003
+coins = [10,10,3]
 
 start_time = time.time()
 print(dp_change(money,coins))
