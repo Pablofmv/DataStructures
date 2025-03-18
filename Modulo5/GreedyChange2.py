@@ -11,6 +11,6 @@ def greedy_change(money,denominations):
     
     return Change
 
-money = 10
-denominations = [10,5,1]
+money = 24
+denominations = [20,1,8]
 print(greedy_change(money,denominations))

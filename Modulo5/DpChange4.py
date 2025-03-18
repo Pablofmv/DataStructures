@@ -19,8 +19,8 @@ def dp_changes(money,coins):
     
     return min_coins[money]
 
-money = 6
-coins = [1,3,4]
+money = 24
+coins = [1,8,20]
 
 start_time = time.time()
 print(dp_changes(money,coins))
