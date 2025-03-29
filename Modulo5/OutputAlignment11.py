@@ -1,34 +1,31 @@
-def edit_distance(first_string, second_string):
+def edit_distance(A,B):
 
-    n = len(first_string)
-    m = len(second_string)
-    
+    n = len(A)
+    m = len(B)
+
     dp = [[0 for _ in range(0,m+1)] for _ in range(0,n+1)]
-    
+
     for i in range(0,n+1):
         dp[i][0] = i
     
     for j in range(0,m+1):
         dp[0][j] = j
-    
+
     for i in range(1,n+1):
         for j in range(1,m+1):
-            deletion = dp[i-1][j] + 1
             insertion = dp[i][j-1] + 1
+            deletion = dp[i-1][j] + 1
 
-            if first_string[i-1] == second_string[j-1]:
+            if A[i-1] == B[j-1]:
                 match = dp[i-1][j-1]
             else:
                 match = dp[i-1][j-1] + 1
             
-            dp[i][j] = min(deletion,insertion,match)
+            dp[i][j] = min(insertion, deletion, match)
     
     return dp[n][m]
-       
 
-    
+A = "Cat"
+B = "Cate"
 
-
-
-if __name__ == "__main__":
-    print(edit_distance(input(), input()))
+print(edit_distance(A,B))
