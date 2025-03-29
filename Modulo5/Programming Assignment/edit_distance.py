@@ -24,11 +24,6 @@ def edit_distance(first_string, second_string):
             dp[i][j] = min(deletion,insertion,match)
     
     return dp[n][m]
-       
-
-    
-
-
 
 if __name__ == "__main__":
     print(edit_distance(input(), input()))
