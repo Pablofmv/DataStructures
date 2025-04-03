@@ -19,8 +19,8 @@ def MinAndMax(i,j,d,ops,m,M):
 
 
     for k in range(i,j):
-        left_min, left_max = m[i][k], M[i][k]
 
+        left_min, left_max = m[i][k], M[i][k]
         right_min, right_max = m[k+1][j], M[k+1][j]
 
         op = ops[k]
