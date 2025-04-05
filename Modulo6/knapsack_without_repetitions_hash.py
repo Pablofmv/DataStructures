@@ -22,10 +22,10 @@ def knapsak(W, weights, values, n,memo = None):
 
     return max_value
 
-values = [60, 100, 120]
-weights = [10,20,30]
-W = 50
-n = len(values)
+weigths = [1,3]
+values = [2,10]
+W = 2
+n = len(weigths)
 
-print(knapsak(W, weights, values, n))
+print(knapsak(W, weigths, values, n))
 
