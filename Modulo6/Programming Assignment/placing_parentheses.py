@@ -15,7 +15,7 @@ def min_and_max(d, ops, m, M, i ,j):
 
     min_val = float("inf")
     max_val = float("-inf")
-
+    
     for k in range(i,j):
 
         min_left, max_left = m[i][k], M[i][k]
@@ -28,8 +28,8 @@ def min_and_max(d, ops, m, M, i ,j):
         c = evaluate(max_left, min_right, op)
         d = evaluate(max_left, max_right, op)
 
-        min_val = min(a, b, c, d)
-        max_val = max(a, b, c, d)
+        min_val = min(min_val, a, b, c, d)
+        max_val = max(max_val, a, b, c, d)
 
     return min_val, max_val
 
@@ -67,7 +67,7 @@ def maximum_value(dataset):
             m[i][j], M[i][j]= min_and_max(d, ops, m, M, i, j)
             
 
-    return m, M
+    return M[0][n-1]
 
 
 if __name__ == "__main__":
